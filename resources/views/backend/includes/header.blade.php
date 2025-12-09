@@ -16,13 +16,13 @@
             </li>
 
             <li class="nav-item dropdown user-menu">
-                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" data-bs-toggle="dropdown">
                     <img src="{{ auth('admin')->user()->profileImageUrl }}" class="user-image rounded-circle shadow"
                         alt="{{ auth('admin')->user()->name }}">
                     <span class="d-none d-md-inline">{{ auth('admin')->user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                    <li class="user-header bg-primary">
+                    <li class="user-header bg-primary d-flex align-items-center justify-content-center">
                         <img src="{{ auth('admin')->user()->profileImageUrl }}" class="rounded-circle shadow" alt="User Image">
                         <p>
                             {{ auth('admin')->user()->name }}

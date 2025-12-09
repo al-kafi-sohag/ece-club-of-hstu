@@ -9,13 +9,7 @@
         <title> @yield('title', 'Backend') | {{ config('app.name', 'Laravel') }}</title>
         @php $page_slug = isset($page_slug) ? $page_slug : ''; @endphp
 
-        @vite(['resources/css/backend/app.css', 'resources/js/backend/app.js'])
-
-        {{-- Temporarily added jQuery --}}
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script>
-            window.$ = window.jQuery = jQuery;
-        </script>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @include('backend.includes.style-bundle')
     </head>

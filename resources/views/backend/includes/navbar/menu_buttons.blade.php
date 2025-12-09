@@ -1,17 +1,7 @@
 @foreach($menuItems as $menuItem)
 {{-- @dd($menuItem) --}}
     @php
-        //This function will take the route name and return the access permission.
-        if( !isset($menuItem['routeName']) || $menuItem['routeName'] == '' || $menuItem['routeName'] == null){
-            $check = false;
-        }else{
-            if(isset($menuItem['permission']) && $menuItem['permission'] != '' && $menuItem['permission'] != null){
-                $check = check_access_by_route_name($menuItem['routeName'],$menuItem['permission']);
-            }else{
-                $check = check_access_by_route_name($menuItem['routeName']);
-            }
-        }
-
+        $check = true;
         //Parameters
         $parameterArray = isset($menuItem['params']) ? $menuItem['params'] : [];
     @endphp

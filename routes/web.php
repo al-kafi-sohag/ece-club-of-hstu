@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Backend\AuthenticationController as BackendAuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\AdminProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,6 +38,11 @@ Route::group(['as' => 'backend.', 'prefix' => 'backend'], function () {
     Route::group(['middleware' => ['admin']], function () {
         Route::controller(DashboardController::class)->name('dashboard.')->group(function () {
             Route::get('dashboard', 'index')->name('index');
+        });
+
+        Route::controller(AdminProfileController::class)->name('profile.')->group(function () {
+            Route::get('profile', 'index')->name('index');
+            Route::post('profile', 'update')->name('update');
         });
     });
 

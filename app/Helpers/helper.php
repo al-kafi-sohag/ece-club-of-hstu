@@ -2,22 +2,22 @@
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
-use App\Models\ApplicationSetting;
+// use App\Models\ApplicationSetting;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Collection;
 
-function get_app_setting($key)
-{
-    if (Cache::has($key)) {
-        return Cache::get($key);
-    }
-    $setting = ApplicationSetting::where('key', $key)->first();
-    if ($setting && $setting->value) {
-        Cache::put($key, $setting->value);
-        return $setting->value;
-    }
-    return null;
-}
+// function get_app_setting($key)
+// {
+//     if (Cache::has($key)) {
+//         return Cache::get($key);
+//     }
+//     $setting = ApplicationSetting::where('key', $key)->first();
+//     if ($setting && $setting->value) {
+//         Cache::put($key, $setting->value);
+//         return $setting->value;
+//     }
+//     return null;
+// }
 
 function timeFormate($time)
 {
