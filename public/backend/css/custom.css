@@ -1,0 +1,203 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.header img {
+    height: 3rem;
+}
+
+.login-card{
+    min-width: 25rem;
+}
+
+.fl-wrapper{
+    z-index: 9999 !important;
+}
+
+.sidebar-menu .nav-link:hover{
+    background-color: var(--bs-gray-bg-hover) !important;
+}
+
+.sidebar-menu .nav-link.active{
+    background-color: var(--bs-gray-bg-hover) !important;
+}
+
+.sidebar-menu .nav-link.active:hover{
+    opacity: 0.75 !important;
+}
+
+.app-main .app-content-header{
+    padding: 1.5rem 0.75rem !important;
+}
+
+.card.card-primary{
+    border-top: 3px solid var(--bs-primary) !important;
+}
+
+.form-group{
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.form-group label{
+    font-weight: 500 !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.form-group .form-control{
+    border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.select2-container{
+    border-radius: var(--bs-border-radius-sm) !important;
+    border-color: var(--bs-gray-200) !important;
+    width: 100% !important;
+}
+
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    height: calc(2.25rem + 2px) !important;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    border-color: var(--bs-gray-200) !important;
+    border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow,
+.select2-container--default
+    .select2-selection--multiple
+    .select2-selection__arrow {
+    top: 16% !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered,
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    margin: 0;
+}
+
+.documentation-card p{
+    font-size: 0.85rem !important;
+}
+
+.documentation-card code{
+    font-size: 0.85rem !important;
+    background-color: var(--bs-gray-bg-hover) !important;
+    border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.dt-container{
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.dt-container .dt-buttons.btn-group{
+    position: absolute !important;
+    top: 1rem !important;
+}
+
+.dt-container .dt-info{
+    position: absolute !important;
+    bottom: 1.5rem !important;
+    left: 0rem !important;
+}
+
+.dt-container .dt-paging{
+    position: absolute !important;
+    bottom: 1rem !important;
+    right: 0rem !important;
+}
+
+.dt-container .dt-buttons.btn-group .btn{
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+.dt-container .dt-search{
+    position: absolute !important;
+    top: 1rem !important;
+    right: 0 !important;
+}
+
+.dt-container .page-item .page-link {
+    border-radius: 0 !important;
+}
+
+.dt-container .page-item:first-child .page-link {
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.dt-container .page-item:last-child .page-link {
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.dt-container .page-item.active .page-link {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+.dt-container td .dropdown{
+    text-align:center;
+}
+
+@media (max-width: 768px) {
+    .header{
+        justify-content: center !important;
+    }
+
+    .header .buttons{
+        display: none !important;
+    }
+
+    .login-card{
+        min-width: 20rem;
+    }
+
+    .dt-container{
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .dt-container .dt-buttons.btn-group{
+        position: static !important;
+    }
+
+    .dt-container .dt-search{
+        position: static !important;
+        margin: 1rem 0rem !important;
+    }
+
+    .dt-container .dt-info{
+        position: static !important;
+        margin: 1rem 0rem !important;
+    }
+
+    .dt-container .dt-paging{
+        position: static !important;
+        margin: 1rem 0rem !important;
+    }
+}

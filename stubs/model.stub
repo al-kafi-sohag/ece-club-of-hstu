@@ -1,0 +1,50 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class {{ class }} extends Model
+{
+    use HasFactory,SoftDeletes;
+
+    const STATUS_ACTIVE = 1;
+    const STATUS_DEACTIVE = -1;
+
+    protected $fillable = [
+    ];
+
+    protected $casts = [
+    ];
+
+    public $appends = [
+        'status_text',
+        'status_class',
+        'status_update_text'
+    ];
+
+    public function scopeEnabled($query)
+    {
+        return $query->where('status', self::STATUS_ACTIVE);
+    }
+    public function scopeDisabled($query)
+    {
+        return $query->where('status', self::STATUS_DEACTIVE);
+    }
+
+    public function getStatusTextAttribute()
+    {
+        return $this->status == self::STATUS_ACTIVE ? 'Active' : 'Deactive';
+    }
+    public function getStatusClassAttribute()
+    {
+        return $this->status == self::STATUS_ACTIVE ? 'success' : 'danger';
+    }
+    public function getStatusUpdateTextAttribute()
+    {
+        return $this->status == self::STATUS_ACTIVE ? 'Deactivate' : 'Activate';
+    }
+}

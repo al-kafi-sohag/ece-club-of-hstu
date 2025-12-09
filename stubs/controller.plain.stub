@@ -1,0 +1,12 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\BackendBaseController;
+
+class {{ class }} extends BackendBaseController
+{
+    //
+}
